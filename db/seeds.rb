@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+hoa1 = Hoa.create( name: "Borderland State Park", address: "44 Grove St.", city: "Easton", state: "MA", zip: "20159", units: 5)

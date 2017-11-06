@@ -25,7 +25,7 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      
+      <%- if user_signed_in? -%>
       <li class="has-dropdown">
         <a href="#">Votes</a>
         <ul class="dropdown">
@@ -52,7 +52,12 @@
           <li><a href="#">Performance</a></li>
         </ul>
       </li>
-
+      <li><%= link_to 'Update Account', edit_user_registration_path, method: :get %></li>
+                <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+                <%- else -%>
+                <li><%= link_to 'Sign In', new_user_session_path %></li>
+                <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+      <% end %>
     </ul>
 
     <!-- Left Nav Section -->

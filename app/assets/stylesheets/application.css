@@ -33,3 +33,28 @@ li.has-dropdown {
   }
 
 }
+.secondimage img {
+  width: 100%;
+
+}
+
+
+.firstimage img {
+  width: 100%;
+
+}
+
+.buildingdash {
+  text-align: center;
+}
+.dash-repairs p {
+  text-align: center;
+  border-style: solid;
+  border-width: medium;
+}
+
+.dash-votes p {
+  text-align: center;
+  border-style: solid;
+  border-width: medium;
+}

@@ -43,7 +43,7 @@
           <li><a href="#">Rquest Repair</a></li>
         </ul>
       </li>
-      <li><a href="#">Docs</a></li>
+      <li></li>
       <li class="has-dropdown">
         <a href="#">Budget</a>
         <ul class="dropdown">
@@ -67,9 +67,10 @@
   </section>
 </nav>
     <div id="app">
-      <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+
     <%= yield %>
+    <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

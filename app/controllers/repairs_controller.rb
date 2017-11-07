@@ -30,7 +30,7 @@ class RepairsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def repair_params
-    params.require(:repair).permit(:title, :description, :url, :submitter)
+    params.require(:repair).permit(:title, :description, :hoa_id)
   end
 
 end

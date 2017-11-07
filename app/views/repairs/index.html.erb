@@ -1,0 +1,13 @@
+<h1>Repairs</h1>
+
+<ul class="unstyled">
+  <% @repairs.each do |repair| %>
+  <li>
+    <%= link_to repair.title, repair %>
+  </li>
+  <% end %>
+</ul>
+<br />
+<p>
+  <%= link_to 'Request new Repair', new_repair_path %>
+</p>

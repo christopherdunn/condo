@@ -39,8 +39,8 @@
         <a href="#">Projects/Repairs</a>
         <ul class="dropdown">
           <li><a href="#">Projects</a></li>
-          <li><a href="#">Repairs</a></li>
-          <li><a href="#">Request Repair</a></li>
+          <li><%= link_to 'Repairs', repairs, method: :get %></li>
+          <li><%= link_to 'Request Repair', new_repair, method: :get %></li>
         </ul>
       </li>
       <li></li>

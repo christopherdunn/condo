@@ -1,18 +1,17 @@
 class Api::V1::HoasController < ApplicationController
-  def index
-    render json: { hoa: Hoa.all.sample }
-  end
+  # def index
+  #   render json: Hoa.all
+  # end
 
   def show
-    hoa = Hoa.find(params["id"]).to_json(include: :condo_documents)
+    hoa = Hoa.find(params[:id]).to_json(include: :condo_documents)
 
-    condo_documents = CondoDocument.where(hoa_id: params["id"]).to_json()
+    condo_documents = CondoDocument.where(hoa_id: params[:id]).to_json
 
     render json: { hoa: hoa, condo_documents: condo_documents }
   end
 
   def new
-
   end
 
 

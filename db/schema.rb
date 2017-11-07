@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171106203802) do
+ActiveRecord::Schema.define(version: 20171106230258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20171106203802) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["hoa_id"], name: "index_condo_documents_on_hoa_id"
+  end
+
+  create_table "hoa_memberships", force: :cascade do |t|
+    t.bigint "hoa_id", null: false
+    t.bigint "user_id", null: false
+    t.boolean "trustee", default: false, null: false
+    t.boolean "admin", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hoa_id"], name: "index_hoa_memberships_on_hoa_id"
+    t.index ["user_id"], name: "index_hoa_memberships_on_user_id"
   end
 
   create_table "hoas", force: :cascade do |t|

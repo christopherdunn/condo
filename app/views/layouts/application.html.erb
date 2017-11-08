@@ -39,11 +39,11 @@
         <a href="#">Projects/Repairs</a>
         <ul class="dropdown">
           <li><a href="#">Projects</a></li>
-          <li><%= link_to 'Repairs', repairs, method: :get %></li>
-          <li><%= link_to 'Request Repair', new_repair, method: :get %></li>
+          <li><%= link_to 'Repairs', hoa_repairs_path(@hoa), method: :get %></li>
+          <li><%= link_to 'Request Repair', new_hoa_repair_path(1), method: :get %></li>
         </ul>
       </li>
-      <li></li>
+      <li><%= link_to 'Docs', hoa_condo_documents_path(1), method: :get %></li>
       <li class="has-dropdown">
         <a href="#">Budget</a>
         <ul class="dropdown">

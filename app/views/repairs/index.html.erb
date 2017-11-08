@@ -3,11 +3,11 @@
 <ul class="unstyled">
   <% @repairs.each do |repair| %>
   <li>
-    <%= link_to repair.title, repair %>
+    <%= link_to repair.title, hoa_repair_path(@hoa, repair) %>
   </li>
   <% end %>
 </ul>
 <br />
 <p>
-  <%= link_to 'Request new Repair', new_repair_path %>
+  <%= link_to 'Request new Repair', new_hoa_repair_path %>
 </p>

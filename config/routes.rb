@@ -10,13 +10,16 @@ Rails.application.routes.draw do
       resources :users
       resources :hoas
       resources :condo_documents
+      #resources :repairs
 
     end
   end
-  
-  resources :repairs, only: [:index, :show, :new, :create]
-  resources :hoas
-  resources :condo_documents
+
+
+  resources :hoas do
+    resources :condo_documents
+    resources :repairs, only: [:index, :show, :new, :create]
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 get "*path", to: "pages#index"

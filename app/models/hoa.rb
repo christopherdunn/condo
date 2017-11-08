@@ -1,6 +1,7 @@
 class Hoa < ApplicationRecord
   has_many :condo_documents
   has_many :hoa_memberships
+  has_many :repairs
   has_many :users, through: :hoa_memberships
 
   validates_presence_of :name

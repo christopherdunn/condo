@@ -2,6 +2,8 @@
 <div class="buildingdash">
     <h1>Building Dashboard</h1>
     <br>
+    <p>Hi <%= current_user.first_name %></p>
+    <br>
     <div class="row">
       <div class="small-3 columns">
       </div>
@@ -23,11 +25,20 @@
 <div class="firstimage">
   <%= image_tag("condo-managr") %>
 </div>
+<div class="bar">
+  <h2> What Makes Us Great!</h2>
+</div>
 <div class="row">
   <div class="large-4 columns">
     <div class="secondimage">
     <%= image_tag("cell-condo-managr") %>
   </div>
 </div>
+<div class="large-4 columns">
+  <div class="thirdimage">
+  <%= image_tag("laptop-condo-managr") %>
 </div>
+</div>
+</div>
+
 <% end %>

@@ -23,11 +23,12 @@
   </ul>
 
   <section class="top-bar-section">
-    <% user = current_user.id %>
-    <% hoa = current_user.hoas.first.id %>
+
     <!-- Right Nav Section -->
     <ul class="right">
       <%- if user_signed_in? -%>
+      <% user = current_user.id %>
+      <% hoa = current_user.hoas.first.id %>
       <li class="has-dropdown">
         <a href="#">Votes</a>
         <ul class="dropdown">
@@ -45,11 +46,7 @@
           <li><%= link_to 'Request Repair', new_hoa_repair_path(hoa), method: :get %></li>
         </ul>
       </li>
-<<<<<<< HEAD
-      <li></li>
-=======
       <li><%= link_to 'Docs', hoa_condo_documents_path(hoa), method: :get %></li>
->>>>>>> repairs
       <li class="has-dropdown">
         <a href="#">Budget</a>
         <ul class="dropdown">

@@ -7,6 +7,7 @@ class RepairsController < ApplicationController
 
   # GET /articles/1
   def show
+    @hoa = Hoa.find(params[:hoa_id])
     @repair = Repair.find(params[:id])
   end
 

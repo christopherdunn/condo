@@ -15,6 +15,9 @@
  *= require foundation_and_overrides
 
  */
+.docs h1 {
+    text-align: center;
+}
 .top-bar {
   background-color: #012C59;
 }

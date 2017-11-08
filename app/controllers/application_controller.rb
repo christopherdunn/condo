@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token
 
 protected
+
 def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :phone])
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :phone])

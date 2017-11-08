@@ -15,6 +15,14 @@
  *= require foundation_and_overrides
 
  */
+
+ul.repair {
+  list-style-image: url('repair.png');
+}
+
+.docs h1 {
+    text-align: center;
+}
 .top-bar {
   background-color: #012C59;
 }

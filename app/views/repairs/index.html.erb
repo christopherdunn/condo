@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="small-3 small-centered columns">
+    <h1>Repairs</h1>
+        <ul class="repair">
+            <% @repairs.each do |repair| %>
+            <li>
+                <%= link_to repair.title, hoa_repair_path(@hoa, repair) %>
+            </li>
+            <% end %>
+        </ul>
+        <br />
+        <p>
+        <%= link_to 'Request new Repair', new_hoa_repair_path %>
+        </p>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @repair.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @repair.description %>
+</p>
+
+<%= link_to 'Back', hoa_repairs_path(@hoa) %>

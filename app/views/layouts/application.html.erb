@@ -41,7 +41,7 @@
       <li class="has-dropdown">
         <a href="#">Projects/Repairs</a>
         <ul class="dropdown">
-          <li><a href="#">Projects</a></li>
+          <li><%= link_to 'Projects', hoa_projects_path(hoa) %></li>
           <li><%= link_to 'Repairs', hoa_repairs_path(hoa) %></li>
           <li><%= link_to 'Request Repair', new_hoa_repair_path(hoa), method: :get %></li>
         </ul>

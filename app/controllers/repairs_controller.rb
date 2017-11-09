@@ -1,4 +1,5 @@
 class RepairsController < ApplicationController
+  before_action :authenticate_user!
   # GET /repairs
   def index
     @hoa = Hoa.find(params[:hoa_id])

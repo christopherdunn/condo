@@ -1,7 +1,12 @@
 <div class="row">
   <div class="small-3 small-centered columns">
     <h1>Repairs</h1>
-        <ul class="repair">
+  </div>
+</div>
+<div class="row" id="repairs">
+  <div class="small-4 columns">
+    <h2>New</h2>
+        <ul class="repair" id="newrepair">
             <% @repairs.each do |repair| %>
             <li>
                 <%= link_to repair.title, hoa_repair_path(@hoa, repair) %>
@@ -12,5 +17,11 @@
         <p>
         <%= link_to 'Request new Repair', new_hoa_repair_path %>
         </p>
-  </div>
+      </div>
+      <div class="small-4 columns" id="inprocessrepair">
+        <h2>In Process</h2>
+      </div>
+      <div class="small-4 columns" id="finishedrepair">
+        <h2>Finished</h2>
+      </div>
 </div>

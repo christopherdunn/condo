@@ -3,7 +3,8 @@
 
   <p>Use the form below to request a new repair.</p>
 </div>
-
+<div class="row">
+  <div class="small-4 columns">
 <%= form_for([@hoa, @repair], html: { class: 'form-horizontal' }) do |f| %>
 
   <% if @repair.errors.any? %>
@@ -37,3 +38,5 @@
     <%= link_to 'Back', hoa_repairs_path, class: 'btn' %>
   </div>
 <% end %>
+</div>
+</div>

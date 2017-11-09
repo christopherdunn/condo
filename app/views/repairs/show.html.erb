@@ -1,9 +1,10 @@
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-
+<div class="row">
+  <div class="small-4 columns">
 <p>
-  <strong>Title:</strong>
+  <strong>Requested Repair:</strong>
   <%= @repair.title %>
 </p>
 
@@ -13,3 +14,5 @@
 </p>
 
 <%= link_to 'Back', hoa_repairs_path(@hoa) %>
+</div>
+</div>

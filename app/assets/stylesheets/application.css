@@ -20,6 +20,13 @@ ul.repair {
   list-style-image: url('repair.png');
 }
 
+ul.docs {
+  list-style-image: url('file.png');
+}
+li.docs {
+  text-align: center;
+}
+
 .docs h1 {
     text-align: center;
 }
@@ -67,7 +74,7 @@ li.has-dropdown {
 
 #repairs h2 {
   text-align: center;
-  
+
 }
 
 .buildingdash {

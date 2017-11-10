@@ -1,5 +1,15 @@
 <div class="docs">
 <h1>Docs</h1>
-
-
+<div class="row" id="repairs">
+  <div class="small-3 small-centered columns">
+<ul class="docs" id="newdocs">
+    <% @condo_documents.each do |condo| %>
+      <li>
+          <%= link_to condo.name, hoa_condo_document_url(@hoa, condo) %>
+      </li>
+    <% end %>
+</ul>
+</div>
+</div>
+<%= link_to 'Submit Condo Docs', new_hoa_condo_document_path %>
 </div>

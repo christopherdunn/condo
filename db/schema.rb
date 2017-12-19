@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171108200411) do
+ActiveRecord::Schema.define(version: 20171205012134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "budgets", force: :cascade do |t|
+    t.string "oil"
+    t.string "gas"
+    t.string "electric"
+    t.string "fees"
+    t.string "assessments"
+    t.string "water"
+    t.string "insurance"
+    t.string "accounting"
+    t.string "repairs"
+    t.string "landscaping"
+    t.string "snow"
+    t.string "miscellaneous"
+    t.string "cleaning"
+    t.string "taxes"
+    t.string "waste_removal"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "condo_documents", force: :cascade do |t|
     t.string "document"
@@ -63,6 +83,7 @@ ActiveRecord::Schema.define(version: 20171108200411) do
     t.bigint "hoa_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "repair_photo"
     t.index ["hoa_id"], name: "index_repairs_on_hoa_id"
   end
 
